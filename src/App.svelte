@@ -18,11 +18,11 @@
 </svelte:head>
 
 <NavBar />
-<center>
+<div style="text-align: center;">
 	<input bind:value={text} placeholder="Todo" />
 	<button on:click={add}>Add</button>
 
 	{#each todos as todo}
 		<Item text={todo} />
 	{/each}
-</center>
+</div>
