@@ -8,13 +8,14 @@
 	let text = "";
 
 	function add() {
+		if (text == "") return
 		todos = [...todos, text];
 		text = "";
 	}
 </script>
 
 <svelte:head>
-	<link href="https://www.astrocore.net/style.css" rel="stylesheet" type="text/css" />
+	<link href="https://astrocorenet.pyan.repl.co/style.css" rel="stylesheet" type="text/css" />
 </svelte:head>
 
 <NavBar />

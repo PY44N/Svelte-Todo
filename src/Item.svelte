@@ -2,10 +2,6 @@
 	export let text;
 	let done = false;
 	let visible = true;
-
-	function toggle() {
-		done = !done;
-	}
 </script>
 
 <style>
@@ -22,7 +18,7 @@
 {#if visible}
 	<div class="TodoDiv">
 		<h4 class={done ? "completed" : "notcompleted"}>{text}</h4>
-		<button on:click={toggle}>{done ? "✔️" : "❌"}</button>
+		<button on:click={() => done = !done}>{done ? "✔️" : "❌"}</button>
 		<button	button on:click={() => visible = false}>🗑️</button>
 	</div>
 {/if}
